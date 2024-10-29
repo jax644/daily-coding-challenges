@@ -17,3 +17,12 @@ function pofi(n){
       return '-i'
     }
   }
+
+//   Arrow function version
+
+  const pofi = (n) => {
+    (n % 4) == 0 ? '1' :
+    (n + 3) % 4 == 0 ? 'i' :
+    (n + 2) % 4 == 0 ? '-1' :
+    '-i'
+  }
