@@ -33,3 +33,20 @@ function findOdd(A) {
     // return the number
     return result
   }
+
+  function findOdd(A) {
+    let result
+    let evaluatedNums = []
+
+    for (let i=0; i<A.length;i++) {
+      if (!evaluatedNums.includes(A[i])) {
+        if (A.filter((n) => n == A[i]).length % 2 != 0) {
+          result = A[i];
+          break;
+        }
+        evaluatedNums.push(A[i])
+      }
+    }
+
+    return result
+  }
