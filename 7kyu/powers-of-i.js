@@ -20,9 +20,26 @@ function pofi(n){
 
 //   Arrow function version
 
-  const pofi = (n) => {
+  const pofi = (n) => 
     (n % 4) == 0 ? '1' :
     (n + 3) % 4 == 0 ? 'i' :
     (n + 2) % 4 == 0 ? '-1' :
     '-i'
-  }
+  
+    // Learned that if you have brackets with an arrow funcion, you need a return statement
+    // Otherwise the return is implicit
+
+    const pofi = ['1','i','-1','-i'][n%4]
+
+    // favorite codewars solution ^
+
+    function pofi(n) {
+        switch (n%4) {
+            case 0: return '1';
+            case 1: return 'i';
+            case 2: return '-1';
+            case 3: return '-i';
+        }
+    }
+
+    // most readable solution ^
