@@ -1,0 +1,35 @@
+// Complete the function that
+
+// accepts two integer arrays of equal length
+// compares the value each member in one array to the corresponding member in the other
+// squares the absolute value difference between those two values
+// and returns the average of those squared absolute value difference between each member pair.
+
+
+    // NOTES
+    // firstArray and secondArray are equal lengths and only contain integers
+    // for each index, find the absolute value of the difference between the two arrays
+    // square that value
+    // return the average of the squared values for each index
+    
+    // PSEUDOCODE
+      // create a new array "difs" to hold the differences
+        // this new array is firstArray with the map method
+          // map method returns the absolute value of each difference with Math.abs()
+      // create a new array "squaredDifs"
+        // this new array is "difs" with the map method to square each index
+      // create a new variable "result"
+        // use the reduce method to calculate the average of squaredDifs
+      // return the result
+
+var solution = function(firstArray, secondArray) {      
+      const difs = firstArray.map((el,i) => Math.abs(el - secondArray[i]))
+      console.log(`difs is ${difs}`);
+    
+      
+      const squaredDifs = difs.map((el) => el**2);
+      console.log(`squaredDifs is ${squaredDifs}`);
+      
+      const averageOfSquaredDifs = Number(squaredDifs.reduce((acc, cur) => acc+cur))/squaredDifs.length;
+      return averageOfSquaredDifs;
+    }
