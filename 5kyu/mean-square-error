@@ -33,3 +33,13 @@ var solution = function(firstArray, secondArray) {
       const averageOfSquaredDifs = Number(squaredDifs.reduce((acc, cur) => acc+cur))/squaredDifs.length;
       return averageOfSquaredDifs;
     }
+
+    // second solution
+
+    const solution = (arr1, arr2) => 
+        arr1.map((el,i) => Math.abs(el - arr2[i])**2)
+            .reduce((acc, cur) => acc+cur)/arr1.length
+
+    // Lessons
+    // I did not need to wrap the result of the reduce method in "Number" because reduce returns a single value, not an array with a single element.
+    // I can probably get away with not making so many new variables all the time, but simply adding to my existing variables as I read my pseudocode.  This would save me time while optimizing my solutions.
