@@ -11,6 +11,19 @@
 // Output = {}
 // Input strings will only contain letters. Note: keep the original order of the names in the output.
 
+
+// First solution: O(n) time, O(n) space
 function friend(friends){
     return friends.filter((friend) => friend.length == 4)
   }
+
+// Second solution: O(n) time, O(1) space
+function friend(friends){
+
+    for (i=friends.length-1;i<0;i--) {
+        if (friends[i].length != 4) {
+            friends.splice(i,i+1);
+        }
+    }
+    return friends
+}
