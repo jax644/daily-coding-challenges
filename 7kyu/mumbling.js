@@ -6,14 +6,21 @@
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
+// function accum(s) {
+//   let arr = s.split('')
+  
+//   let resultArr = []
+  
+//   for (i=0; i<arr.length; i++) {
+//     resultArr.push(${arr[i].toUpperCase()}${arr[i].toLowerCase().repeat(i)})
+//   }
+  
+//   return resultArr.join('-')
+// }
+
 function accum(s) {
-  let arr = s.split('')
-  
-  let resultArr = []
-  
-  for (i=0; i<arr.length; i++) {
-    resultArr.push(${arr[i].toUpperCase()}${arr[i].toLowerCase().repeat(i)})
-  }
-  
-  return resultArr.join('-')
+    return s.split('')
+        .map((l,i) => 
+            (l.toUpperCase() + l.toLowerCase().repeat(i)))
+        .join('')
 }
