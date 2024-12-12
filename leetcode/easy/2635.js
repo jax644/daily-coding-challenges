@@ -45,6 +45,8 @@ var map = function(arr, fn) {
         newArray.push(fn(arr[i],i))
     }
 
+    // OR: arr.forEach((num, i) => newArray.push(fn(arr[i],i)))
+
     return newArray
     
 };
