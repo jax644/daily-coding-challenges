@@ -6,42 +6,11 @@
 // [160, 3, 1719, 19, 11, 13, -21] --> 160 (the only even number)
 
 function findOutlier(integers){
+
+  let evenInts = integers.filter(int => int % 2 ===0)
   
-    function getParityOfArr(sample) {
-      let parityOfArr
-      let evenNumsInSample = 0
-      let oddNumsInSample = 0
-      
-      let paritiesOfNumsInSample = sample.map(num => num % 2 === 0 ? "even" : "odd")
-  
-      for (parity of paritiesOfNumsInSample) {
-        if (parity === "even") {
-          evenNumsInSample += 1
-          if (evenNumsInSample > 1) {
-            parityOfArr = "even"
-            break
-          }
-        } else if (parity === "odd") {
-            oddNumsInSample += 1
-            if (oddNumsInSample > 1) {
-              parityOfArr = "odd"
-              break
-          }
-        }
-      }
-      return parityOfArr
-    }
-    
-  let parityOfIntegers = getParityOfArr(integers.slice(0,3))
-    
-  let outlier
-  
-   if (parityOfIntegers === "even") {
-     outlier = integers.filter(integer => integer % 2 !== 0)
-   } else if(parityOfIntegers === "odd"){
-     outlier = integers.filter(integer => integer % 2 === 0)
-   }
-  
-  return outlier[0]
-  
-  }
+  return (evenInts.length === 1) 
+    ? evenInts[0] 
+    : integers.find(int => int % 2 !== 0)
+
+}
