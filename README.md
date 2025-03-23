@@ -1,13 +1,13 @@
 # 🧠 Code Challenges Repository
 
-Welcome to my repository for **Codewars** and **LeetCode** solutions! 💻 This collection showcases my problem-solving skills and proficiency in various programming concepts. Each solution is written in **JavaScript** (and possibly more languages in the future!).
+Welcome to my repository for coding challenge solutions! 💻 This collection showcases my problem-solving skills and proficiency in various programming concepts. Each solution is written in **JavaScript** (and possibly more languages in the future!).
 
 ---
 
 ## 📂 Repository Structure
 The repository is organized by platform and difficulty level:
 
-📁 Codewars/ 📁 8kyu/ 📁 7kyu/ 📁 6kyu/ 📁 5kyu/ 
+📁Codewars/ 📁 8kyu/ 📁 7kyu/ 📁 6kyu/ 📁 5kyu/ 
 📁LeetCode/ 📁 Easy/ 📁 Medium/ 📁 Hard/
 
 Each folder contains:
